@@ -1,0 +1,43 @@
+/*  Univerzalni selektor za resetiranje svih elemenata na stranici da nemaju margine i padding 
+    ( razlog je što browser dodaje defaultne margine na elemente ), dodani i pseudo-elementi */
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        /* mijenja box model na način da border i padding više nisu pribrojani ukupnoj visini odnosno širini box modela, 
+           vrijednost inherit forsira da svi elementi na web stranicu naslijede vrijednost iz body elementa */
+        box-sizing: inherit;
+    }
+    
+    html {
+        /* root font-size, postotak je stavljen kako se defaultni browser font ne bi overrideao te user može mijenjati defaultni font */
+        /* definira koliko je 1rem */
+        font-size: 62.5%; // 1rem = 10px;
+        scroll-behavior: smooth;
+
+        @include respond(big-desktop) {
+            font-size: 75%; // 1rem = 12px, 12/16 = 75%
+        }
+
+        @include respond(tab-land) {
+            font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%  
+        }
+
+        @include respond(tab-port) {
+            font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+        }
+    }
+    body {
+        box-sizing: border-box;
+        padding: 3rem;
+
+        @include respond(tab-port) {
+            padding: 0;
+        }
+    }
+
+    ::selection {
+        background-color: $color-primary;
+        color: $color-white;
+    }

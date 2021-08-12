@@ -1,0 +1,210 @@
+.navigation {
+    
+    &__checkbox {
+        display: none;
+    }
+
+    &__back-to-top {
+        color: $color-primary;
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+        text-decoration: none;
+        top: 85%;
+        right: 4.4%;
+        z-index: 999;
+
+        border: 2px solid $color-primary;
+        transition: all .3s;
+        visibility: hidden;
+        opacity: 0;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        & span {
+            @include centerHorizontalVertical;
+            font-size: 2.5rem;
+        }
+
+        &:hover {
+            color: #fff;
+            background-color: $color-primary;
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        }
+
+        @include respond(tab-land) {
+            right: 3.7%;
+        }
+    }
+
+    &__button {
+        height: 7rem;
+        width: 7rem;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
+
+        @include respond(tab-land) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(tab-port) {
+            top: 3rem;
+            right: 3rem;
+        }
+    }
+
+    &__button, 
+    &__back-to-top {
+        background-color: $color-white;
+        position: fixed;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        // razlika izmedu linear i radial gradienta je ta da radial kreće iz sredine te prema svim kutevima
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+
+        @include respond(tab-land) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(tab-port) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        // stranica za tranzicijske funkcije https://easings.net/ i https://cubic-bezier.com/#.17,.67,.83,.67 
+        transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &__list {
+        @include centerHorizontalVertical;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;        
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            background-size: 230%;
+            transition: all .4s;
+
+            span {
+                display: inline-block;
+                margin-right: 1.5rem;
+            }           
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(1rem);
+            
+        }
+    }
+
+    // FUNCTIONALITY
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+    //ICON
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-gray-dark-3;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+}
