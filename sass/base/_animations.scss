@@ -1,45 +1,45 @@
- /*  prilikom kreiranja animacija, zbog performansi browsera ( tj. browseri su oprimizirani za ta dva propertya ), 
-        najbolje je koristiti samo dva propertya: opacity i transform */
-        @keyframes moveInLeft {
-            0% {
-                opacity: 0;
-                transform: translateX(-10rem)
-            }
+/*  When creating animations, for browser performance best practice is to use only two properties: opacity and transform
+    ( reason behind this is that the browsers are optimized for only those two properties */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem)
+    }
         
-            80% {
-                transform: translateX(1rem);
-            }
+    80% {
+        transform: translateX(1rem);
+    }
         
-            100% {
-                opacity: 1;
-                transform: translate(0);
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
         
-        @keyframes moveInRight {
-            0% {
-                opacity: 0;
-                transform: translateX(10rem)
-            }
+ @keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem)
+    }
         
-            80% {
-                transform: translateX(-1rem);
-            }
+    80% {
+        transform: translateX(-1rem);
+    }
         
-            100% {
-                opacity: 1;
-                transform: translate(0);
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
         
-        @keyframes moveInBottom {
-            0% {
-                opacity: 0;
-                transform: translatey(3rem)
-            }
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translatey(3rem)
+    }
         
-            100% {
-                opacity: 1;
-                transform: translate(0);
-            }
-        }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

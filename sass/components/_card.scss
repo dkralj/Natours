@@ -1,5 +1,5 @@
 .card {
-    // Pruža dojam približavanja elementa prilikom hovera
+    // Perspective gives impression of element coming closer to the user while hovering
     // Functionality
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -52,7 +52,7 @@
     &__picture {
         background-size: cover;
         height: 23rem;
-        // Novi properti, nije supportan od strane IE i Edge-a, definira kako će se pozadine elementa "blendati" jedan sa drugim https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode
+        // Defines how background of the element will blend with one another https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -88,7 +88,7 @@
 
     &__heading-span {
         padding: 1rem 1.5rem;
-        // Definira kako će se fragmenti elementa renderirati kada se element prikazuje preko više linija, redaka ili stranica
+        // Defines how the fragments of the element will render when the element is shown across multiple lines, columns or pages 
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 

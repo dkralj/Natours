@@ -1,7 +1,7 @@
 .btn {
     &,
-    &:link, /* pseudo klasa koja reprezentira element koji se još nije posjetio ( not visited )  */
-    &:visited /* pseudo klasa koja reprezentira element koji se je posjetio ( visited ) */ {
+    &:link, 
+    &:visited {
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
@@ -11,7 +11,6 @@
         position: relative;
         font-size: $default-font-size;
 
-        //Promjena za <button> element
         border: none;
         cursor: pointer;
     }
@@ -21,7 +20,7 @@
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
 
         &::after {
-            /* za povećavanje elementa */ 
+            /* for making the element bigger */ 
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
@@ -52,8 +51,7 @@
         }
     }
 
-    /*  dodaje se element nakon navedenog elementa, u ovome slučaju iza elementa ( z-index ),
-        ::after se tretira kao child element */
+    /* adds a element behind given element, it is treated as a child element */
     &::after {
         content: "";
         display: inline-block;
@@ -69,7 +67,7 @@
 
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
-        /* automatski postavlja stile na 0% animacije prije nego li je animacija počela */
+        // automatically sets styles on 0% of the animation before the animation start
         animation-fill-mode: backwards;
     }
 }

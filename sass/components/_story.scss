@@ -22,9 +22,10 @@
     &__shape {
         height: 15rem;
         width: 15rem;
-        float: left;
 
-        // Definira izgled elementa, zahtjeva definiranu visinu, širinu i mora biti floatan kako bi radilo
+
+        // Defines the look of the element, requires defined height, width and has to be floated
+        float: left;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);

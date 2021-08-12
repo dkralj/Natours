@@ -11,7 +11,7 @@
     &__content {
         height: 100%;
         width: 100%;
-        // koristi se da element zauzme cijelu sirinu i visinu parent elementa sadrzavajuci svoj aspect ratio
+        // Used so that the element takes whole width and height of the parent element keeping its aspect ratio
         object-fit: cover;
     }
 }

@@ -51,12 +51,13 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     
-    // Sljedeća četiri retka kreiraju efekt liearnog gradienta na naslovnom elementu, gdje je boja teksta transparenta te su slova prikazana bojom pozadinske slike
+    // Next five lines of code create linear gradient effect on heading element, where the color of the text is transparent and the letters are shown in the color of the background image
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
     overflow: hidden;
 
     letter-spacing: .2rem;

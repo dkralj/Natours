@@ -18,7 +18,7 @@
     transform: skewY(-7deg);
     margin-top: -11.5rem;
 
-    // Selektira sve direktne potomke roditelja ( samo div koji ima row klasu )
+    // Selekts all direct descendants ( only div that has row class )
     & > * {
         transform: skewY(7deg);
     }
@@ -57,29 +57,29 @@
 }
 
 .book {
-    // solid color gradient - jedan od načina kako napraviti razne oblike kao pozadinu
+    // solid color gradient - one of the ways how to make different backgrounds
     background-image: linear-gradient(105deg, 
-                        rgba($color-white, .9) 0%,
-                        rgba($color-white, .9) 50%,
-                        transparent 50%), 
-                        url('../img/nat-10.jpg');
+                      rgba($color-white, .9) 0%,
+                      rgba($color-white, .9) 50%,
+                      transparent 50%), 
+                      url('../img/nat-10.jpg');
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .25);
 
     @include respond(tab-land) {
         background-image: linear-gradient(105deg,
-            rgba($color-white, .9) 0%,
-            rgba($color-white, .9) 65%,
-            transparent 65%),
-        url('../img/nat-10.jpg');
-    }
+                          rgba($color-white, .9) 0%,
+                          rgba($color-white, .9) 65%,
+                          transparent 65%),
+                          url('../img/nat-10.jpg');
+    }   
 
     @include respond(tab-port) {
         background-image: linear-gradient(to right,
-            rgba($color-white, .9) 0%,
-            rgba($color-white, .9) 100%),
-        url('../img/nat-10.jpg');
+                          rgba($color-white, .9) 0%,
+                          rgba($color-white, .9) 100%),
+                          url('../img/nat-10.jpg');
     }
 
     &__form {

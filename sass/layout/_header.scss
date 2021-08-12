@@ -1,16 +1,16 @@
 .header {
     position: relative;
     overflow: hidden;
-    height: 85vh; /* visina elementa će uvijek biti 95% veličine ekrana neovisno o veličini ekrana */
+    height: 85vh; /* height of the element will always be 85% of the viewport height */
     background-image: linear-gradient(
                           to right bottom,
                         rgba($color-primary, 0.8), 
                         rgba($color-primary-dark, 0.8)), 
                         url("../img/hero-small.jpg") ;
-    background-size: cover; /* slike će se prilagoditi kako bi prekrila cijelu širinu elemeneta */
-    background-position: top; /* gornji dio slike će uvijek ostati isti prilikom promjene veličine ekrana dok će donji dio izrezati ( cropped out ) */
+    background-size: cover; /* image will adjust so it covers whole width of the element */
+    background-position: top; /* top part of the image will always stay the same when changing size of the screen while the bottom part will be cropped out */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* omogućava nam kreiranje raznih oblika na principu koordinatnog sustava ( https://bennettfeely.com/clippy/ )  */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* allows us to create different kinds of shape based on coordinate system ( https://bennettfeely.com/clippy/ )  */
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -39,7 +39,7 @@
     }
 
     &__logo {
-    /* prilikom definiranja veličine slike, koristi se samo jedna od dimenzija dok će se druga prilagoditi */
+    /* when defining size of the image, best practice is to use only one property ( either height or width ) and the other will adjust accordingly*/
         height: 3.5rem;
     }
 
@@ -48,8 +48,6 @@
         top: 40%;
         left: 50%;
         text-align: center;
-        /* još jedan od načina za centriranje elementa, 
-        element se ovdje pomiče u ovisnosti o samome sebi, a ne u ovisnosti o parent elementu */
         transform: translate(-50%, -50%);
     }
 }

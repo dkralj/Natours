@@ -22,6 +22,8 @@
         border-radius: 3px;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         @include centerHorizontalVertical;
+        
+        // display: table on parentu and display: table-cell on child elements allows us simple creation of same height columns
         display: table;
         overflow: hidden;
         opacity: 0;
@@ -37,6 +39,8 @@
 
     &__left {
         width: 33.33333%;
+        
+        // display: table on parentu and display: table-cell on child elements allows us simple creation of same height columns
         display: table-cell;
 
         @include respond(popup-breakpoint) {
@@ -51,6 +55,8 @@
 
     &__right {
         width: 66.666667%;
+        
+        // display: table on parentu and display: table-cell on child elements allows us simple creation of same height columns
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
@@ -134,5 +140,3 @@
         }
     }
 }
-
-// display: table na parentu i display: table-cell na child elementima omogućava nam jednostavno kreiranje stupaca iste visine

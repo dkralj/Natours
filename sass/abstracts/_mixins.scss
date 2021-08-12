@@ -1,3 +1,4 @@
+/// Clearfix hack when using float layout designs
 @mixin clearfix {
     &::after {
         content: "";
@@ -6,6 +7,8 @@
     }
 }
 
+
+/// Mixin that centers an element 
 @mixin centerHorizontalVertical {
     position: absolute;
     top: 50%;
@@ -21,13 +24,11 @@
 901 - 1200px:  Tablet landscape
 1201 - 1800px: Desktop
 1801px +:       Big desktop
-
-
-
 */
+
 @mixin respond-phone {
     @media (max-width: 600px) {
-        @content; //omogućava nam da ubacujemo "content" odnosno željene vrijednosti (kod) unutar mixina
+        @content; // allows us to use any content ( by content I mean values ) inside mixin
     } 
 }
 

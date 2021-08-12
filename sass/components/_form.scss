@@ -45,7 +45,7 @@
         transition: all .3s;
     }
 
-    // ~ sibling selektor + adjacent sibling selektor
+    // ~ sibling selector + adjacent sibling selector
     &__input:placeholder-shown + &__label {
         opacity: 0;
         visibility: hidden;

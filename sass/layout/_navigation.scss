@@ -75,7 +75,7 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        // razlika izmedu linear i radial gradienta je ta da radial kreće iz sredine te prema svim kutevima
+        // difference between linear and radial gradient is that radial start from the middle and goes to the corners
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
@@ -100,7 +100,7 @@
 
         opacity: 0;
         width: 0;
-        // stranica za tranzicijske funkcije https://easings.net/ i https://cubic-bezier.com/#.17,.67,.83,.67 
+        // Websites for transition functions https://easings.net/ and https://cubic-bezier.com/#.17,.67,.83,.67 
         transition: all .8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
 
@@ -144,7 +144,7 @@
         }
     }
 
-    // FUNCTIONALITY
+    // FUNCTIONALITY ( CHECKBOX HACK )
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -185,6 +185,7 @@
         }
     }
 
+    // Animation of the navigation button for transition between lines and X
     &__button:hover &__icon::before {
         top: -1rem;
     }
