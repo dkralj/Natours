@@ -124,4 +124,6 @@ In the next sections I will be breaking down the things that have been shown in 
 - Added auto-hide to navigation when the user clicks on an item ( using jQuery )
 - Added few links to outside pages
 
-# Disclaimer: I did not design the page. For any question about using the web page design, contact Jonas Schmedtmann
+## Disclaimer## 
+
+I am not the owner of page design. For any question about using the page design in commercial purposes, contact Jonas Schmedtmann.
