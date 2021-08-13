@@ -6,6 +6,11 @@ This project is done without any usage of flexbox or grid.
 
 In the next sections I will be breaking down the things that have been shown in separate project sections, starting from general project settings until writing media queries for responsive design.
 
+
+## Disclaimer
+
+I am not the owner of page design. For any question about using the page design in commercial purposes, contact Jonas Schmedtmann.
+
 ## General project settings
 
 - Setting up the basic reset using **universal selector**
@@ -123,7 +128,3 @@ In the next sections I will be breaking down the things that have been shown in 
 - Added smooth scrolling
 - Added auto-hide to navigation when the user clicks on an item ( using jQuery )
 - Added few links to outside pages
-
-## Disclaimer## 
-
-I am not the owner of page design. For any question about using the page design in commercial purposes, contact Jonas Schmedtmann.
