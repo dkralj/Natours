@@ -1,6 +1,5 @@
 # Natours
-Natours project is **one** of the three projects built for *Advanced CSS and Sass Udemy Course made by Jonas Schmedtmann*.     
-( https://www.udemy.com/course/advanced-css-and-sass/ )
+Natours project is **one** of the three projects built on design made by Jonas Schmedtmann.     
 
 This project is done without any usage of flexbox or grid.
 
