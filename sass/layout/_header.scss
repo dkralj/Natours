@@ -1,16 +1,16 @@
 .header {
     position: relative;
     overflow: hidden;
-    height: 85vh; /* height of the element will always be 85% of the viewport height */
+    height: 85vh; /* Height of the element will always be 85% of the viewport height */
     background-image: linear-gradient(
                           to right bottom,
                         rgba($color-primary, 0.8), 
                         rgba($color-primary-dark, 0.8)), 
                         url("../img/hero-small.jpg") ;
-    background-size: cover; /* image will adjust so it covers whole width of the element */
-    background-position: top; /* top part of the image will always stay the same when changing size of the screen while the bottom part will be cropped out */
+    background-size: cover; /* Image will adjust so it covers whole width of the element */
+    background-position: top; /* Top part of the image will always stay the same when changing size of the screen while the bottom part will be cropped out */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* allows us to create different kinds of shape based on coordinate system ( https://bennettfeely.com/clippy/ )  */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* Allows us to create different kinds of shape based on coordinate system ( https://bennettfeely.com/clippy/ )  */
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -39,7 +39,7 @@
     }
 
     &__logo {
-    /* when defining size of the image, best practice is to use only one property ( either height or width ) and the other will adjust accordingly*/
+    /* When defining size of the image, best practice is to use only one property ( either height or width ) and the other will adjust accordingly*/
         height: 3.5rem;
     }
 
