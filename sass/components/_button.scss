@@ -20,7 +20,7 @@
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
 
         &::after {
-            /* for making the element bigger */ 
+            /* For making the element bigger */ 
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
@@ -51,7 +51,7 @@
         }
     }
 
-    /* adds a element behind given element, it is treated as a child element */
+    /* Adds element behind given element, it is treated as a child element */
     &::after {
         content: "";
         display: inline-block;
@@ -67,7 +67,7 @@
 
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
-        // automatically sets styles on 0% of the animation before the animation start
+        // Automatically sets styles on 0% of the animation before the animation start
         animation-fill-mode: backwards;
     }
 }
