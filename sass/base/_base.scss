@@ -1,17 +1,17 @@
-/*  Universal selektor for reseting all the elements on the page so they dont have any margin or padding since by the default browsers add them to the elements, 
+/*  Universal selector for reseting all the elements on the page so they dont have any margin or padding since by the default browsers adds them to the elements, 
     also added for the pseudo-selectors since they dont inherit the values from the universal selector */
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
-    /*  inherit value forces all elements on the web page to inherit the value from the body element*/
+    /*  Inherit value forces all elements on the web page to inherit the value from the body element */
     box-sizing: inherit;
 }
     
 html {
-    /* font size is given in % so that the default browser font wont be overridden and so that user can change default font-size*/
-    /* defines how much 1rem is */
+    /* Font size is given in % so that the default browser font wont be overridden and so that user can change default font-size */
+    /* Defines how much 1rem is */
     font-size: 62.5%; // 1rem = 10px;
     scroll-behavior: smooth;
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    /* changes the way box model calculates width and height in a way that border size and padding arent added to the full width and height */
+    /* Changes the way box model calculates width and height in a way that border size and padding arent added to the full width and height */
     box-sizing: border-box;
     padding: 3rem;
 
