@@ -75,7 +75,7 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        // difference between linear and radial gradient is that radial start from the middle and goes to the corners
+        // Difference between linear and radial gradient is that radial starts from the middle and goes to the corners
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
