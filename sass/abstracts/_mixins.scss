@@ -28,7 +28,7 @@
 
 @mixin respond-phone {
     @media (max-width: 600px) {
-        @content; // allows us to use any content ( by content I mean values ) inside mixin
+        @content; // Allows us to use any content ( by content I mean values ) inside mixin
     } 
 }
 
