@@ -18,7 +18,7 @@
     transform: skewY(-7deg);
     margin-top: -11.5rem;
 
-    // Selekts all direct descendants ( only div that has row class )
+    // Selects all direct descendents ( only div that has row class )
     & > * {
         transform: skewY(7deg);
     }
