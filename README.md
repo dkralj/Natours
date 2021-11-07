@@ -1,6 +1,8 @@
 # Natours
 Natours project is **one** of the three projects built on design made by Jonas Schmedtmann.     
 
+Natours is booking app for adventurous people who are seeking escape from everyday life to make exciting memories for their whole life. Users can see which tours are offered, reviews from users that have been on the tours and book the tour they wish to experience.
+
 This project is done without any usage of flexbox or grid.
 
 In the next sections I will be breaking down the things that have been shown in separate project sections, starting from general project settings until writing media queries for responsive design.
